@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Training Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+    <h2>Training Management System</h2>
+
+    <form action="Tm" method="post">
+        <label>ID:</label>
+        <input type="number" name="id" required>
+
+        <label>Name:</label>
+        <input type="text" name="name">
+
+        <label>Contact:</label>
+        <input type="number" name="contact">
+
+        <label>City:</label>
+        <input type="text" name="city">
+
+        <label>Domain:</label>
+        <input type="text" name="domain">
+
+        <label>Select Action:</label>
+        <select name="action">
+            <option value="insert">Insert</option>
+            <option value="update">Update</option>
+            <option value="delete">Delete</option>
+            <option value="display">Display</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

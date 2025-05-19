@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Shopping Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f7;
+            padding: 40px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 450px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h2>Online Shopping Management System</h2>
+    <form action="Osm" method="post">
+        <label for="action">Action (1=Add, 2=Update, 3=Delete, 4=View All):</label>
+        <input type="number" name="action" required>
+
+        <label for="id">Product ID:</label>
+        <input type="number" name="id">
+
+        <label for="name">Product Name:</label>
+        <input type="text" name="name">
+
+        <label for="price">Price:</label>
+        <input type="text" name="price">
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity">
+
+        <input type="submit" value="Submit">
+        <p class="note">Note: Fill only the necessary fields for the selected action.</p>
+    </form>
+</body>
+</html>

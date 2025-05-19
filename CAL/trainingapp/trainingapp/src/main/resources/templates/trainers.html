@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trainer List</title>
+</head>
+<body>
+    <h1>All Trainers</h1>
+    <a href="/trainers/new">Add New Trainer</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Expertise</th>
+                <th>Experience</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="trainer : ${trainers}">
+                <td th:text="${trainer.id}">1</td>
+                <td th:text="${trainer.name}">John Doe</td>
+                <td th:text="${trainer.expertise}">Java</td>
+                <td th:text="${trainer.experience}">5</td>
+                <td>
+                    <a th:href="@{'/trainers/delete/' + ${trainer.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

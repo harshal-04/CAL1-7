@@ -1,0 +1,122 @@
+/* Root Theme Variables */
+:root {
+    --bg-color: #f4f7f8;
+    --form-bg: rgba(255, 255, 255, 0.6);
+    --text-color: #333;
+    --accent-color: #3498db;
+    --hover-color: #2980b9;
+    --border-color: #ccc;
+    --label-color: #2c3e50;
+    --box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+}
+
+body.dark-mode {
+    --bg-color: #1e1e1e;
+    --form-bg: rgba(50, 50, 50, 0.8);
+    --text-color: #f0f0f0;
+    --accent-color: #9b59b6;
+    --hover-color: #8e44ad;
+    --border-color: #555;
+    --label-color: #f0f0f0;
+    --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h2 {
+    color: var(--label-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    background: var(--form-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    max-width: 450px;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    transition: background 0.4s ease;
+}
+
+label {
+    font-weight: 600;
+    color: var(--label-color);
+    display: block;
+    margin-top: 15px;
+    position: relative;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 5px var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+input[type="submit"] {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--hover-color);
+}
+
+/* Responsive design */
+@media screen and (max-width: 500px) {
+    form {
+        padding: 20px;
+        max-width: 95%;
+    }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--hover-color);
+}

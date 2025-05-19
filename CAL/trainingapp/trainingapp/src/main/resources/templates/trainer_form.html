@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Add New Trainer</h2>
+            <form id="trainerForm">
+                <div class="form-group">
+                    <label for="name">Trainer Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter Trainer's Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter Trainer's Email">
+                </div>
+                <div class="form-group">
+                    <label for="expertise">Expertise</label>
+                    <input type="text" id="expertise" name="expertise" required placeholder="Enter Trainer's Expertise">
+                </div>
+                <div class="form-group">
+                    <label for="avatar">Trainer Avatar</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*" required>
+                    <div id="uploadStatus" class="upload-status">
+                        <div id="progressBar" class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Add Trainer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
